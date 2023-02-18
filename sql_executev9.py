@@ -27,6 +27,9 @@ def ConnectToDB(db_name):
 
 
 class MainWindow(wx.Frame):
+    '''
+    Main Frame of the software
+    '''
     def __init__(self, parent, title, mode, db):
         wx.Frame.__init__(self, parent, title=title, size=(600, 400))
 
@@ -116,6 +119,11 @@ class MainWindow(wx.Frame):
         self.counter_returned_label.SetLabel("0 results")
 
     def on_save_as(self, event):
+        '''
+        Event function when push on the save button
+        :param event:
+        :return:
+        '''
         if len(self.results)==0:
             return False
         else:
